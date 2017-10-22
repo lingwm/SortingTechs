@@ -21,10 +21,47 @@ public class Sorter {
         }
     }
 
+    /**
+     * selection sort
+     * @param array to be sorted
+     */
+    public void selection(int[] array){
+        for (int i=0;i<array.length-1;i++){         //the i turn of sorting
+            int k=i;                                //k is the position of minimum
+            for (int j=i+1;j<array.length;j++){     //if find a new minimum, update k
+                if (array[j]<array[k]){
+                    k=j;
+                }
+            }
+            if (k!=i){                              //switch array[i] and array[k]
+                int temp=array[i];
+                array[i]=array[k];
+                array[k]=temp;
+            }
+        }
+    }
 
-    public void selection(int[] array){}
+    /**
+     * bubble sort
+     * @param array to be sorted
+     */
+    public void bubble(int[] array){
 
-    public void bubble(int[] array){}
+        boolean b=true;                           //decide if go on sorting
+        while (b){
+            b=false;
+            for (int i=0;i<array.length-1;i++){   //comparing for each sorting
+                if (array[i]>array[i+1]){         //switch elements
+                    int temp=array[i];
+                    array[i]=array[i+1];
+                    array[i+1]=temp;
+                    b=true;                       //if switch happened, set b to true to start one more sorting
+                }
+            }
+        }
+
+
+    }
 
 
 
