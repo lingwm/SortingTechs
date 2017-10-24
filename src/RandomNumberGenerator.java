@@ -10,9 +10,9 @@ public class RandomNumberGenerator {
 
         public static void main(String... aArgs) throws IOException {
 
-            Writer wr = new FileWriter("RandomNumber1.txt");
+            Writer wr = new FileWriter("RandomNumber10.txt");
             Random randomGenerator = new Random();
-            for (int idx = 1; idx <= 1000; ++idx) {
+            for (int idx = 1; idx <= 10000; ++idx) {
                 int randomInt = randomGenerator.nextInt(1000001);
                 wr.write(String.valueOf(randomInt) + System.getProperty( "line.separator" ));
             }
