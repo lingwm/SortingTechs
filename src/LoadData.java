@@ -9,6 +9,13 @@ import java.util.ArrayList;
  * Created by Lingwei Meng on 2017/10/21.
  */
 public class LoadData {
+
+    /**
+     * read data from a file
+     * transform to int array and return
+     * @param file
+     * @return
+     */
     public int[] readFile(File file){
         BufferedReader reader=null;
         String tempstr;
